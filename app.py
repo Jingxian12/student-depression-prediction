@@ -2,8 +2,6 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-# Load model
-model = joblib.load("model.pkl")
 
 # Title
 st.title("Student Depression Prediction")
@@ -19,7 +17,3 @@ if st.button("Predict"):
         "age": [age],
         "academic_pressure": [academic_pressure]
     })
-
-    prediction = model.predict(input_data)
-
-    st.write(prediction)
