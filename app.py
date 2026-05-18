@@ -8,7 +8,10 @@ model = joblib.load("model.joblib")
 st.set_page_config(page_title="Student Depression Prediction")
 
 st.title("Student Depression Prediction App")
-st.write("Fill in the details below to predict risk.")
+st.write(
+    "This application provides an early screening for potential depression risk among students. "
+    "It is intended for educational and awareness purposes only and should not replace professional medical advice."
+)
 
 # -------------------------
 # INPUT FIELDS
