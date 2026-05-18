@@ -29,7 +29,10 @@ dietary_habits = st.selectbox(
     ["Unhealthy","Moderate","Healthy"]
 )
 
-degree = st.text_input("Degree")
+degree = st.selectbox(
+    "Degree",
+    ["Pre-University","Bachelor","Master","Doctorate", "Others"]
+)
 suicidal_thoughts = st.selectbox(
     "Have you ever had suicidal thoughts?",
     ["Yes", "No"]
