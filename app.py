@@ -15,39 +15,31 @@ st.write("Fill in the details below to predict risk.")
 # -------------------------
 
 age = st.number_input("Age", 10, 100, 20)
-
 city = st.text_input("City")
-
 academic_pressure = st.slider("Academic Pressure", 0, 10, 5)
-work_pressure = st.slider("Work Pressure", 0, 10, 5)
-
 cgpa = st.number_input("CGPA", 0.0, 10.0, 5.0)
 
 study_satisfaction = st.slider("Study Satisfaction", 0, 10, 5)
 job_satisfaction = st.slider("Job Satisfaction", 0, 10, 5)
-
 sleep_duration = st.selectbox(
     "Sleep Duration",
     ["<5 hours", "5-6 hours", "6-7 hours", "7-8 hours", ">8 hours"]
 )
-
 dietary_habits = st.selectbox(
     "Dietary Habits",
     ["Healthy", "Moderate", "Unhealthy"]
 )
 
 degree = st.text_input("Degree")
-
 suicidal_thoughts = st.selectbox(
     "Have you ever had suicidal thoughts?",
     ["Yes", "No"]
 )
 
 work_study_hours = st.number_input("Work/Study Hours per day", 0, 24, 5)
-
 financial_stress = st.slider("Financial Stress", 0, 10, 5)
 
-family_history = st.selectbox(
+family_history_mental_illness = st.selectbox(
     "Family History of Mental Illness",
     ["Yes", "No"]
 )
@@ -62,7 +54,6 @@ if st.button("Predict"):
         "Age": [age],
         "City": [city],
         "Academic Pressure": [academic_pressure],
-        "Work Pressure": [work_pressure],
         "CGPA": [cgpa],
         "Study Satisfaction": [study_satisfaction],
         "Job Satisfaction": [job_satisfaction],
@@ -72,7 +63,7 @@ if st.button("Predict"):
         "Have you ever had suicidal thoughts ?": [suicidal_thoughts],
         "Work/Study Hours": [work_study_hours],
         "Financial Stress": [financial_stress],
-        "Family History of Mental Illness": [family_history],
+        "Family History of Mental Illness": [family_history_mental_illness],
     })
 
     prediction = model.predict(input_data)[0]
