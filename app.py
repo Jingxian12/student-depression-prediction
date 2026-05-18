@@ -63,6 +63,7 @@ if st.button("Predict"):
         "financial_stress": [financial_stress],
         "family_history_mental_illness": [family_history_mental_illness],
     })
+    input_data = input_data[model.feature_names_in_]
 
     proba = model.predict_proba(input_data)[0][1]  # probability of class 1
     threshold = 0.44110572
