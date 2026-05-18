@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 
 # Load model
-model = pickle.load("model.pkl")
+model = joblib.load("model.joblib")
 
 st.set_page_config(page_title="Student Depression Prediction")
 
