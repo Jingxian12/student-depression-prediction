@@ -14,7 +14,7 @@ st.write("Fill in the details below to predict risk.")
 # INPUT FIELDS
 # -------------------------
 
-age = st.number_input("Age", 10, 100)
+age = st.number_input("Age", 10, 100 ,20)
 city = st.text_input("City")
 academic_pressure = st.slider("Academic Pressure", 0, 5, 3)
 cgpa = st.number_input("CGPA", 0.0, 10.0, 5.0)
