@@ -112,9 +112,42 @@ After clicking the Predict button, the application displays:
   - No significant signs of depression detected
   - Possible signs of depression detected
 
---- 
-**Disclaimer**:
 
+**This image shows a sample test data instance obtained from the train-test split in the notebook, used to demonstrate and explain the model’s output.**
+ ![Test Data](images/test-data.png)
+ 
+### A) Case 1
+**This image shows a sample input instance from the dataset labeled as depression = 0 (no depression)**
+
+<p align="center">
+  <img src="images/test1-1.png" width="600" height="600"/>
+
+  <img src="images/test1-2.png" width="600" height="600"/>
+
+  <img src="images/test1-3.png" width="600" height="600"/>
+</p>
+
+### B) Case 2 : 
+**This image shows a sample input instance from the dataset labeled as depression = 1 (depression)**
+<p align="center">
+  <img src="images/test2-1.png" width="600" height="600"/>
+
+  <img src="images/test2-2.png" width="600" height="600"/>
+</p>
+
+### C) Case 3 (Special Case): 
+**This image shows a sample instance labeled as 0 (no depression) in the dataset, but the model predicts 1 (possible depression) after threshold adjustment in Streamlit.**
+
+<p align="center">
+  <img src="images/test3-1.png" width="600" height="600"/>
+
+  <img src="images/test3-2.png" width="600" height="600"/>
+</p>
+
+**This reflects the intentional trade-off to prioritize recall, where false negatives are reduced even if it results in more false positives for early risk detection. This ensures that students who may have a risk of depression are not missed during screening.**
+
+---
+**Disclaimer**:
 This application is intended for educational and early screening purposes only.
 
 It is NOT a medical diagnosis tool and should not replace professional mental health assessment, diagnosis, or treatment.
