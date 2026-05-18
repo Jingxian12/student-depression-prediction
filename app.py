@@ -20,7 +20,6 @@ academic_pressure = st.slider("Academic Pressure", 0, 10, 5)
 cgpa = st.number_input("CGPA", 0.0, 10.0, 5.0)
 
 study_satisfaction = st.slider("Study Satisfaction", 0, 10, 5)
-job_satisfaction = st.slider("Job Satisfaction", 0, 10, 5)
 sleep_duration = st.selectbox(
     "Sleep Duration",
     ["<5 hours", "5-6 hours", "6-7 hours", "7-8 hours", ">8 hours"]
@@ -56,7 +55,6 @@ if st.button("Predict"):
         "Academic Pressure": [academic_pressure],
         "CGPA": [cgpa],
         "Study Satisfaction": [study_satisfaction],
-        "Job Satisfaction": [job_satisfaction],
         "Sleep Duration": [sleep_duration],
         "Dietary Habits": [dietary_habits],
         "Degree": [degree],
