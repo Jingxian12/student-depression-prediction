@@ -11,6 +11,12 @@ This project is a machine learning-based web application that predicts the likel
 
 The goal of this project is to provide an early screening tool for awareness and educational purposes.
 
+**Features**
+- Interactive Streamlit web application
+- Instant depression risk prediction
+- Probability-based prediction using a custom classification threshold
+- End-to-end Scikit-learn preprocessing pipeline
+  
 ## 2. Dataset
 The dataset used in this project was obtained from Kaggle:
 
@@ -29,52 +35,86 @@ The dataset contains student-related information such as:
 - Family history of mental illness
 - Degree and city information
 
+## 3. Exploratory Data Analysis (EDA)
 
-## 3. Data Preprocessing
-Several preprocessing techniques were applied:
-- Missing value imputation
-- Feature scaling
-- One-hot encoding
-- Ordinal encoding
-- Binary encoding
+Exploratory data analysis was conducted to understand feature distributions, relationships, and potential patterns in the dataset.
 
-## 4. Machine Learning Pipeline
-The project uses a Scikit-learn `Pipeline` and `ColumnTransformer` for preprocessing and model training.
+The analysis included:
+- Distribution plots and boxplots
+- Correlation heatmaps for numerical features
+- Cramér’s V analysis for categorical feature relationships
+- Chi-square tests for categorical associations
+- Missing value and class distribution analysis
 
-### Numerical Features
-- Median imputation
+## 4. Data Preprocessing
+
+The preprocessing pipeline was implemented using Scikit-learn `Pipeline` and `ColumnTransformer`.
+
+Techniques used include:
+- Median imputation for numerical features
 - Standard scaling
+- One-hot encoding for categorical variables
+- Ordinal encoding for ordered categorical variables
+- Binary encoding for yes/no features
 
-### Categorical Features
-- One-hot encoding with unknown category handling
+The preprocessing pipeline and trained model were exported using `joblib`.
 
-### Ordinal Features
-Custom ordinal encoding for:
-- Sleep duration
-- Dietary habits
+## 5. Machine Learning Models
+Multiple classification algorithms were evaluated for this project:
+- Logistic Regression (baseline model)
+- Random Forest Classifier
+- XG Boost
+  
+Each model was trained using the same preprocessing pipeline for fair comparison.
 
-### Binary Features
-Ordinal encoding for binary yes/no variables.
 
-The trained model was exported using `joblib`.
+## 6. Model Optimization
+Hyperparameter tuning was conducted using `GridSearchCV` to identify the best-performing model configuration.
 
-## 5. Model Performance
+Different model configurations were evaluated and compared using validation metrics such as:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Learning Curve
 
-The prediction threshold was adjusted to improve recall and reduce false negatives.
+## 7. Model Performance
+The final model was chosen based on:
+- Recall (priority metric for reducing false negatives)
+- F1-score
+- ROC-AUC
 
-This means the model prioritizes identifying potentially at-risk students, even if some false positives occur.
+Due to the focus on early mental health screening, recall was prioritized over precision.
+A `Precision–Recall curve` was used to analyze the tradeoff between precision and recall and to select an optimal classification threshold.
 
-This tradeoff is important in mental health screening applications, where missing a high-risk individual may be more harmful than incorrectly flagging a low-risk individual.
+## 8. Technologies Used
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Streamlit
+- Joblib
+- Matplotlib
+- Seaborn
 
-## 6. Technologies Used
-Python
-Pandas
-NumPy
-Scikit-learn
-Streamlit
-Joblib
+--- 
 
-Disclaimer
+## 9. How to Use the Application
+1. Start the application using Streamlit
+2. Enter the required student information in the form
+3. Click the **Predict** button
+4. The system will generate an instant prediction of depression risk based on the trained machine learning model
+
+## 10. Output
+After clicking the Predict button, the application displays:
+
+- A final prediction result:
+  - No significant signs of depression detected
+  - Possible signs of depression detected
+
+--- 
+**Disclaimer**:
+
 This application is intended for educational and early screening purposes only.
 
 It is NOT a medical diagnosis tool and should not replace professional mental health assessment, diagnosis, or treatment.
