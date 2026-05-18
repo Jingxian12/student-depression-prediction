@@ -100,7 +100,7 @@ A `Precision–Recall curve` was used to analyze the tradeoff between precision 
 --- 
 
 ## 9. How to Use the Application
-1. Start the application using Streamlit
+1. Start the application using Streamlit (https://student-depression-prediction-app.streamlit.app/)
 2. Enter the required student information in the form
 3. Click the **Predict** button
 4. The system will generate an instant prediction of depression risk based on the trained machine learning model
