@@ -7,42 +7,41 @@ model = joblib.load("model.joblib")
 
 st.set_page_config(page_title="Student Depression Prediction")
 
-st.title("🎓 Student Depression Prediction App")
+st.title("Student Depression Prediction App")
 st.write("Fill in the details below to predict risk.")
 
 # -------------------------
 # INPUT FIELDS
 # -------------------------
+age = st.number_input("Age :", 10, 100 ,20)
+city = st.text_input("City :")
+academic_pressure = st.slider("Academic Pressure :", 0, 5, 3)
+cgpa = st.number_input("CGPA :", 0.0, 10.0, 5.0)
 
-age = st.number_input("Age", 10, 100 ,20)
-city = st.text_input("City")
-academic_pressure = st.slider("Academic Pressure", 0, 5, 3)
-cgpa = st.number_input("CGPA", 0.0, 10.0, 5.0)
-
-study_satisfaction = st.slider("Study Satisfaction", 0, 5, 3)
+study_satisfaction = st.slider("Study Satisfaction :", 0, 5, 3)
 sleep_duration = st.selectbox(
-    "Sleep Duration",
+    "Sleep Duration :",
     ["Less than 5 hours","5-6 hours","7-8 hours","More than 8 hours"]
 )
 dietary_habits = st.selectbox(
-    "Dietary Habits",
+    "Dietary Habits :",
     ["Unhealthy","Moderate","Healthy"]
 )
 
 degree = st.selectbox(
-    "Degree",
+    "Degree :",
     ["Pre-University","Bachelor","Master","Doctorate", "Others"]
 )
 suicidal_thoughts = st.selectbox(
-    "Have you ever had suicidal thoughts?",
+    "Have you ever had suicidal thoughts? :",
     ["Yes", "No"]
 )
 
-work_study_hours = st.number_input("Work/Study Hours per day", 0, 24, 5)
-financial_stress = st.slider("Financial Stress", 0, 5, 3)
+work_study_hours = st.number_input("Work/Study Hours per day :", 0, 24, 5)
+financial_stress = st.slider("Financial Stress :", 0, 5, 3)
 
 family_history_mental_illness = st.selectbox(
-    "Family History of Mental Illness",
+    "Family History of Mental Illness :",
     ["Yes", "No"]
 )
 
