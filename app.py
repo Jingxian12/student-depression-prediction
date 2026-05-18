@@ -66,7 +66,9 @@ if st.button("Predict"):
         "Family History of Mental Illness": [family_history_mental_illness],
     })
 
-    prediction = model.predict(input_data)[0]
+    proba = model.predict_proba(input_data)[0][1]  # probability of class 1
+    threshold = 0.44110572
+    prediction = 1 if proba >= threshold else 0
 
     st.subheader("Result")
 
