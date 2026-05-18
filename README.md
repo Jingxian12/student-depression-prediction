@@ -5,7 +5,7 @@ An end-to-end machine learning project for early student depression risk predict
 This project is a machine learning-based web application that predicts the likelihood of depression risk among students based on lifestyle, academic, and personal factors.
 
 **The application is built using:**
-- Python
+- Python 3.12
 - Scikit-learn
 - Streamlit
 
