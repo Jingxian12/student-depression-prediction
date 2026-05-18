@@ -50,18 +50,18 @@ family_history_mental_illness = st.selectbox(
 if st.button("Predict"):
 
     input_data = pd.DataFrame({
-        "Age": [age],
-        "City": [city],
-        "Academic Pressure": [academic_pressure],
-        "CGPA": [cgpa],
-        "Study Satisfaction": [study_satisfaction],
-        "Sleep Duration": [sleep_duration],
-        "Dietary Habits": [dietary_habits],
-        "Degree": [degree],
-        "Have you ever had suicidal thoughts ?": [suicidal_thoughts],
-        "Work/Study Hours": [work_study_hours],
-        "Financial Stress": [financial_stress],
-        "Family History of Mental Illness": [family_history_mental_illness],
+        "age": [age],
+        "city": [city],
+        "academic_pressure": [academic_pressure],
+        "cgpa": [cgpa],
+        "study_satisfaction": [study_satisfaction],
+        "sleep_duration": [sleep_duration],
+        "dietary_habits": [dietary_habits],
+        "degree": [degree],
+        "suicidal_thoughts": [suicidal_thoughts],
+        "work_study_hours": [work_study_hours],
+        "financial_stress": [financial_stress],
+        "family_history_mental_illness": [family_history_mental_illness],
     })
 
     proba = model.predict_proba(input_data)[0][1]  # probability of class 1
