@@ -66,8 +66,15 @@ This means the model prioritizes identifying potentially at-risk students, even 
 
 This tradeoff is important in mental health screening applications, where missing a high-risk individual may be more harmful than incorrectly flagging a low-risk individual.
 
-Disclaimer
+## 6. Technologies Used
+Python
+Pandas
+NumPy
+Scikit-learn
+Streamlit
+Joblib
 
+Disclaimer
 This application is intended for educational and early screening purposes only.
 
 It is NOT a medical diagnosis tool and should not replace professional mental health assessment, diagnosis, or treatment.
