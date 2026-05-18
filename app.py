@@ -77,6 +77,6 @@ if st.button("Predict"):
     st.subheader("Result")
 
     if prediction == 1:
-        st.error("High risk of depression ⚠️")
+        st.error("Possible signs of depression detected ⚠️")
     else:
-        st.success("Low risk of depression ✅")
+        st.success("No significant signs of depression detected ✅")
