@@ -16,10 +16,10 @@ st.write("Fill in the details below to predict risk.")
 
 age = st.number_input("Age", 10, 100, 20)
 city = st.text_input("City")
-academic_pressure = st.slider("Academic Pressure", 0, 10, 5)
+academic_pressure = st.slider("Academic Pressure", 0, 5, 3)
 cgpa = st.number_input("CGPA", 0.0, 10.0, 5.0)
 
-study_satisfaction = st.slider("Study Satisfaction", 0, 10, 5)
+study_satisfaction = st.slider("Study Satisfaction", 0, 5, 3)
 sleep_duration = st.selectbox(
     "Sleep Duration",
     ["Less than 5 hours","5-6 hours","7-8 hours","More than 8 hours"]
@@ -39,7 +39,7 @@ suicidal_thoughts = st.selectbox(
 )
 
 work_study_hours = st.number_input("Work/Study Hours per day", 0, 24, 5)
-financial_stress = st.slider("Financial Stress", 0, 10, 5)
+financial_stress = st.slider("Financial Stress", 0, 5, 3)
 
 family_history_mental_illness = st.selectbox(
     "Family History of Mental Illness",
