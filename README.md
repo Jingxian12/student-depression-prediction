@@ -122,6 +122,7 @@ After clicking the Predict button, the application displays:
 
 
 **This image shows a sample test data instance obtained from the train-test split in the notebook, used to demonstrate and explain the model’s output.**
+
  ![Test Data](images/test-data.png)
  
 ### A) Case 1
