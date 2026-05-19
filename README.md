@@ -1,6 +1,14 @@
 # student-depression-prediction
 An end-to-end machine learning project for early student depression risk prediction with XGBoost, threshold tuning, and Streamlit deployment.
 
+---
+**Disclaimer**:
+This application is intended for educational and early screening purposes only.
+
+It is NOT a medical diagnosis tool and should not replace professional mental health assessment, diagnosis, or treatment.
+
+If you or someone you know is experiencing mental health difficulties, please seek support from a qualified healthcare professional.
+
 ## 1. Overview
 This project is a machine learning-based web application that predicts the likelihood of depression risk among students based on lifestyle, academic, and personal factors.
 
@@ -146,11 +154,5 @@ After clicking the Predict button, the application displays:
 
 **This reflects the intentional trade-off to prioritize recall, where false negatives are reduced even if it results in more false positives for early risk detection. This ensures that students who may have a risk of depression are not missed during screening.**
 
----
-**Disclaimer**:
-This application is intended for educational and early screening purposes only.
 
-It is NOT a medical diagnosis tool and should not replace professional mental health assessment, diagnosis, or treatment.
-
-If you or someone you know is experiencing mental health difficulties, please seek support from a qualified healthcare professional.
 
