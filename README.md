@@ -1,6 +1,8 @@
 # student-depression-prediction
 An end-to-end machine learning project for early student depression risk prediction with XGBoost, threshold tuning, and Streamlit deployment.
 
+Streamlit App ：(https://student-depression-prediction-app.streamlit.app/)
+
 ---
 **Disclaimer**:
 This application is intended for educational and early screening purposes only.
